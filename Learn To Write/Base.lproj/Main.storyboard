@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kpc-f6-EGE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jlE-8N-G9p">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,17 +14,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Learn_To_Write" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5P-0c-3V4">
-                                <rect key="frame" x="96" y="20" width="183" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-Vp-saP">
                                 <rect key="frame" x="163" y="318.5" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -32,11 +25,11 @@
                                 <connections>
                                     <action selector="vowelImport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lnx-Zz-Rtv"/>
                                     <action selector="vowelImport:" destination="ss6-9I-9Lv" eventType="touchUpInside" id="kR5-h1-a4z"/>
-                                    <segue destination="MUn-s1-Cmh" kind="show" identifier="vowelSegue" id="DDK-Gn-7H3"/>
+                                    <segue destination="MUn-s1-Cmh" kind="show" identifier="vowelSegue" id="y0y-Yz-hGJ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="WmL-MF-4MO">
-                                <rect key="frame" x="67" y="20" width="240" height="128"/>
+                                <rect key="frame" x="67" y="133" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -47,9 +40,16 @@
                                 <connections>
                                     <action selector="diacriticImport:" destination="ss6-9I-9Lv" eventType="touchUpInside" id="4Lm-0x-DvX"/>
                                     <action selector="diacriticImport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cv-Hr-hE1"/>
-                                    <segue destination="MUn-s1-Cmh" kind="show" identifier="diacriticSegue" id="ESu-yx-8aU"/>
+                                    <segue destination="MUn-s1-Cmh" kind="show" identifier="diacriticSegue" id="vQu-ou-0C4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5P-0c-3V4">
+                                <rect key="frame" x="96" y="133" width="183" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,7 +59,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="ss6-9I-9Lv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2279.1999999999998" y="133.5832083958021"/>
+            <point key="canvasLocation" x="3212" y="180.35982008995504"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="7e7-v2-lOR">
@@ -96,7 +96,7 @@
                         <viewLayoutGuide key="safeArea" id="ifh-YH-Tgt"/>
                     </view>
                     <navigationItem key="navigationItem" id="4kN-SL-djE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Go6-3K-IU6">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Go6-3K-IU6">
                             <connections>
                                 <action selector="clearCanvas:" destination="MUn-s1-Cmh" id="c8Y-jW-Fht"/>
                             </connections>
@@ -109,31 +109,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6x-JX-HCs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2981.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="3960.8000000000002" y="181.25937031484258"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Wdl-G9-6oR">
+        <scene sceneID="gGA-um-XCv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kpc-f6-EGE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jlE-8N-G9p" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V6L-6l-S5h">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N8S-Gf-lbJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="u3J-od-3SP"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Bsk-gz-3pk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uCE-Lc-Z9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXT-9K-3LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2272.8000000000002" y="180.35982008995504"/>
         </scene>
     </scenes>
     <resources>
         <image name="download" width="420" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DDK-Gn-7H3"/>
+        <segue reference="y0y-Yz-hGJ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -41,6 +41,9 @@ class DrawingViewController: UIViewController {
             diacritics.remove(at: randomNumber)
         }
         // Do any additional setup after loading the view.
+    
+    
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +51,7 @@ class DrawingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clearCanvas(_ sender: UIBarButtonItem) {
+    @IBAction func clearCanvas(_ sender: UIButton) {
         myCanvasView.clearCanvas()
         reloadInputViews()
      var vowelCount = vowels.count
@@ -58,7 +61,14 @@ class DrawingViewController: UIViewController {
         return
     }
     
-//    func findCircledView(center: CGPoint) {
+    @IBAction func returnToHomeScreen(_ sender: UIButton) {
+        vowelImport = false
+        diacriticImport = false
+        
+        
+        
+    }
+    //    func findCircledView(center: CGPoint) {
 //        // walk through the image views and see if the center of the drawn circle was over one of the views
 //        for (index, view) in enumerate() {
 //            let windowRect = self.view.window?.convertRect(view.frame, fromView: view.superview)
