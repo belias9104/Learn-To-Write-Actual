@@ -15,7 +15,9 @@ class DrawingViewController: UIViewController {
     
     var vowels: [String] = ["അ","ആ","ഇ" ,"ഈ","ഉ","ഊ","എ","ഏ","ഐ","ഒ","ഓ","ഔ"]
     var diacritics: [String] = ["പാ","പി","പീ","പു","പൂ","പെ","പേ","പൈ","പൊ","പോ","പൌ","പം","പഃ","പൃ","പൄ"]
-    var consonants: [String] = ["ക","ഖ", "ഗ"]
+    var consonants: [String] = ["ക","ഖ", "ഗ","ഘ","ങ","ച","ഛ","ജ",]
+    
+    //https://www.unicode.org/charts/nameslist/n_0D00.html
     
     //add consonants
     //add game
