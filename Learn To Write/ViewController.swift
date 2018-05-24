@@ -35,6 +35,9 @@ class ViewController: UIViewController {
         if segue.identifier == "diacriticSegue" {
             nvc.diacriticImport = true
         }
+        if segue.identifier == "baseConsonantSegue" {
+            nvc.baseConsonantImport = true
+        }
     }
 
 }

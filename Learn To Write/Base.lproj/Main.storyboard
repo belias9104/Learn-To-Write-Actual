@@ -18,9 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-Vp-saP">
-                                <rect key="frame" x="156.5" y="317.5" width="62" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-Vp-saP">
+                                <rect key="frame" x="156" y="271" width="62" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="J8N-G6-wK7"/>
+                                    <constraint firstAttribute="width" constant="62" id="yJ3-Gt-jGS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Vowels"/>
                                 <connections>
                                     <action selector="vowelImport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lnx-Zz-Rtv"/>
@@ -28,14 +32,17 @@
                                     <segue destination="MUn-s1-Cmh" kind="show" identifier="vowelSegue" id="y0y-Yz-hGJ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="WmL-MF-4MO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="WmL-MF-4MO">
                                 <rect key="frame" x="67" y="133" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="VIh-tV-uNw"/>
+                                    <constraint firstAttribute="height" constant="128" id="rFP-Yy-Wo2"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-Md-aTF">
-                                <rect key="frame" x="52" y="385" width="271" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-Md-aTF">
+                                <rect key="frame" x="52" y="327" width="271" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Diacritics (Consonant Add ons)"/>
                                 <connections>
                                     <action selector="diacriticImport:" destination="ss6-9I-9Lv" eventType="touchUpInside" id="4Lm-0x-DvX"/>
@@ -43,18 +50,46 @@
                                     <segue destination="MUn-s1-Cmh" kind="show" identifier="diacriticSegue" id="vQu-ou-0C4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5P-0c-3V4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5P-0c-3V4">
                                 <rect key="frame" x="96" y="133" width="183" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="lGp-4C-jSf"/>
+                                    <constraint firstAttribute="width" constant="183" id="zXL-65-Tu8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9w-Pe-OPQ">
+                                <rect key="frame" x="111" y="371" width="153" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Dlh-U7-hY8"/>
+                                    <constraint firstAttribute="width" constant="153" id="JXt-6H-Enu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Base Consonants"/>
+                                <connections>
+                                    <segue destination="MUn-s1-Cmh" kind="show" id="fek-hI-lWP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aeH-Md-aTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dq1-Nv-Ry3"/>
-                            <constraint firstItem="ZjK-Vp-saP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rXh-Ja-Tv4"/>
+                            <constraint firstItem="aeH-Md-aTF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="3H7-3C-G7L"/>
+                            <constraint firstItem="WmL-MF-4MO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="8bG-uY-9DV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WmL-MF-4MO" secondAttribute="trailing" constant="67.5" id="Kdc-uQ-i93"/>
+                            <constraint firstItem="j9w-Pe-OPQ" firstAttribute="top" secondItem="aeH-Md-aTF" secondAttribute="bottom" constant="20" id="MaH-Sx-Tes"/>
+                            <constraint firstItem="aeH-Md-aTF" firstAttribute="top" secondItem="ZjK-Vp-saP" secondAttribute="bottom" constant="20" id="NO8-ev-Clw"/>
+                            <constraint firstItem="WmL-MF-4MO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67.5" id="Nzz-oB-mvq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZjK-Vp-saP" secondAttribute="trailing" constant="156.5" id="Vrg-Yp-W53"/>
+                            <constraint firstItem="A5P-0c-3V4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="eEX-Yq-kFO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aeH-Md-aTF" secondAttribute="trailing" constant="52" id="i5b-Bh-Yiy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j9w-Pe-OPQ" secondAttribute="trailing" constant="111" id="kLX-0k-qUy"/>
+                            <constraint firstItem="j9w-Pe-OPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="mBC-UD-Dnv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A5P-0c-3V4" secondAttribute="trailing" constant="96" id="rgg-9v-iNe"/>
+                            <constraint firstItem="ZjK-Vp-saP" firstAttribute="top" secondItem="WmL-MF-4MO" secondAttribute="bottom" constant="10" id="xka-qJ-AOF"/>
+                            <constraint firstItem="A5P-0c-3V4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="y3Y-tK-3fY"/>
+                            <constraint firstItem="ZjK-Vp-saP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156.40000000000001" id="zKx-Qd-aPK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -138,6 +173,6 @@
         <image name="download" width="420" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y0y-Yz-hGJ"/>
+        <segue reference="fek-hI-lWP"/>
     </inferredMetricsTieBreakers>
 </document>

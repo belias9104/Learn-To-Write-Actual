@@ -12,10 +12,12 @@ class DrawingViewController: UIViewController {
 
     var vowelImport = false
     var diacriticImport = false
+    var baseConsonantImport = false
+    
     
     var vowels: [String] = ["അ","ആ","ഇ" ,"ഈ","ഉ","ഊ","എ","ഏ","ഐ","ഒ","ഓ","ഔ"]
     var diacritics: [String] = ["പാ","പി","പീ","പു","പൂ","പെ","പേ","പൈ","പൊ","പോ","പൌ","പം","പഃ","പൃ","പൄ"]
-    var consonants: [String] = ["ക","ഖ", "ഗ","ഘ","ങ","ച","ഛ","ജ",]
+    var baseConsonants: [String] = ["ക","ഖ", "ഗ","ഘ","ങ","ച","ഛ","ജ","ഝ","ഞ","ട","ഠ","ഡ","ഢ","ണ","ത","ഥ","ദ","ധ","ന","പ","ഫ","ബ","ഭ","മ","യ","ര","റ","ല","ള","ഴ","വ","ശ","ഷ","സ","ഹ","മ്പ"]
     
     //https://www.unicode.org/charts/nameslist/n_0D00.html
     
@@ -39,9 +41,13 @@ class DrawingViewController: UIViewController {
             malayalamText.text = vowels[randomNumber]
             vowels.remove(at: randomNumber)
         }
-        if diacriticImport {
+        else if diacriticImport {
             malayalamText.text = diacritics[randomNumber]
             diacritics.remove(at: randomNumber)
+        }
+        else if baseConsonantImport {
+            malayalamText.text = baseConsonants[randomNumber]
+            baseConsonants.remove(at: randomNumber)
         }
         // Do any additional setup after loading the view.
     
@@ -57,10 +63,24 @@ class DrawingViewController: UIViewController {
     @IBAction func clearCanvas(_ sender: UIButton) {
         myCanvasView.clearCanvas()
         reloadInputViews()
-     var vowelCount = vowels.count
+        var vowelCount = vowels.count
+        var diacriticCount = diacritics.count
+        var baseConsonantCount = baseConsonants.count
+        
         var newRandomNumber = Int(arc4random_uniform(UInt32(vowelCount)))
-        malayalamText.text = vowels[newRandomNumber]
-        vowels.remove(at: newRandomNumber)
+        if vowelImport {
+            
+            malayalamText.text = vowels[newRandomNumber]
+            vowels.remove(at: newRandomNumber)
+        }
+        if diacriticImport {
+            malayalamText.text = diacritics[newRandomNumber]
+            diacritics.remove(at: newRandomNumber)
+        }
+        if baseConsonantImport {
+            malayalamText.text = baseConsonants[newRandomNumber]
+            baseConsonants.remove(at: newRandomNumber)
+        }
         return
     }
     
