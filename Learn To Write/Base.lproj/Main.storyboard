@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-Vp-saP">
-                                <rect key="frame" x="156" y="271" width="62" height="36"/>
+                                <rect key="frame" x="127" y="271" width="120" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="J8N-G6-wK7"/>
-                                    <constraint firstAttribute="width" constant="62" id="yJ3-Gt-jGS"/>
+                                    <constraint firstAttribute="height" constant="36" id="en2-bP-18B"/>
+                                    <constraint firstAttribute="width" constant="120" id="tat-1K-IEs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Vowels"/>
@@ -42,6 +42,10 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-Md-aTF">
                                 <rect key="frame" x="52" y="327" width="271" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="2di-jR-6SX"/>
+                                    <constraint firstAttribute="width" constant="271" id="mmD-r0-zlC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Diacritics (Consonant Add ons)"/>
                                 <connections>
@@ -61,10 +65,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9w-Pe-OPQ">
-                                <rect key="frame" x="111" y="371" width="153" height="36"/>
+                                <rect key="frame" x="111" y="371" width="153" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="Dlh-U7-hY8"/>
-                                    <constraint firstAttribute="width" constant="153" id="JXt-6H-Enu"/>
+                                    <constraint firstAttribute="height" constant="24" id="I3v-7a-eIt"/>
+                                    <constraint firstAttribute="width" constant="153" id="LAW-Um-ovl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="Base Consonants"/>
@@ -75,21 +79,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aeH-Md-aTF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="3H7-3C-G7L"/>
                             <constraint firstItem="WmL-MF-4MO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="8bG-uY-9DV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j9w-Pe-OPQ" secondAttribute="trailing" constant="111" id="DW2-fA-RhY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WmL-MF-4MO" secondAttribute="trailing" constant="67.5" id="Kdc-uQ-i93"/>
-                            <constraint firstItem="j9w-Pe-OPQ" firstAttribute="top" secondItem="aeH-Md-aTF" secondAttribute="bottom" constant="20" id="MaH-Sx-Tes"/>
-                            <constraint firstItem="aeH-Md-aTF" firstAttribute="top" secondItem="ZjK-Vp-saP" secondAttribute="bottom" constant="20" id="NO8-ev-Clw"/>
+                            <constraint firstItem="aeH-Md-aTF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="LuS-Ke-5VN"/>
                             <constraint firstItem="WmL-MF-4MO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67.5" id="Nzz-oB-mvq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZjK-Vp-saP" secondAttribute="trailing" constant="156.5" id="Vrg-Yp-W53"/>
+                            <constraint firstItem="aeH-Md-aTF" firstAttribute="top" secondItem="ZjK-Vp-saP" secondAttribute="bottom" constant="20" id="Pkn-6H-l0Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aeH-Md-aTF" secondAttribute="trailing" constant="52" id="awI-RL-ppH"/>
                             <constraint firstItem="A5P-0c-3V4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="eEX-Yq-kFO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aeH-Md-aTF" secondAttribute="trailing" constant="52" id="i5b-Bh-Yiy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j9w-Pe-OPQ" secondAttribute="trailing" constant="111" id="kLX-0k-qUy"/>
-                            <constraint firstItem="j9w-Pe-OPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="mBC-UD-Dnv"/>
+                            <constraint firstItem="ZjK-Vp-saP" firstAttribute="top" secondItem="WmL-MF-4MO" secondAttribute="bottom" constant="10" id="jPZ-LR-KtN"/>
+                            <constraint firstItem="j9w-Pe-OPQ" firstAttribute="top" secondItem="aeH-Md-aTF" secondAttribute="bottom" constant="20" id="pLw-Xw-jwK"/>
+                            <constraint firstItem="ZjK-Vp-saP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="phi-C5-wkP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A5P-0c-3V4" secondAttribute="trailing" constant="96" id="rgg-9v-iNe"/>
-                            <constraint firstItem="ZjK-Vp-saP" firstAttribute="top" secondItem="WmL-MF-4MO" secondAttribute="bottom" constant="10" id="xka-qJ-AOF"/>
                             <constraint firstItem="A5P-0c-3V4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="y3Y-tK-3fY"/>
-                            <constraint firstItem="ZjK-Vp-saP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156.40000000000001" id="zKx-Qd-aPK"/>
+                            <constraint firstItem="j9w-Pe-OPQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="zOj-BG-cuj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -173,6 +176,6 @@
         <image name="download" width="420" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fek-hI-lWP"/>
+        <segue reference="y0y-Yz-hGJ"/>
     </inferredMetricsTieBreakers>
 </document>
